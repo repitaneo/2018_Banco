@@ -7,18 +7,27 @@ public class Start {
 		// TODO Auto-generated method stub
 
 		
-		Cuenta unaCuenta = new Cuenta("Marcos",
-						"20480023002345670000",
-						20);
-		System.out.println(unaCuenta);
+		Cuenta bbva = new Cuenta("Marcos",
+						"20380023002345670000",
+						2000);
+		System.out.println(bbva);
 		
-		unaCuenta.ingreso(3);
-		System.out.println(unaCuenta);
 		
-		unaCuenta.reintegro(34);
-		System.out.println(unaCuenta);
+		Cuenta  santander = new Cuenta("Maria",
+				"10500023002345670000",
+				5000);
+		System.out.println(santander);
 		
-						
+
+		System.out.println("-----------------------");
+		
+		
+		bbva.transferencia(santander, 150);
+		System.out.println(bbva);
+		System.out.println(santander);
+		
+		
+		
 	}
 
 }

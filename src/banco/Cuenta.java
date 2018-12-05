@@ -89,16 +89,25 @@ public class Cuenta {
 	 * 
 	 */
 	
-	public void ingreso(long dinero) {
+	public void ingreso(double dinero) {
 		
 		saldo += dinero;
 	}
 
 	
-	public void reintegro(long dinero) {
+	public void reintegro(double dinero) {
 		
 		saldo -= dinero;
 	}
+	
+	
+	public void transferencia(Cuenta destino,double cantidad) {
+		
+		this.saldo -= cantidad;
+		destino.saldo += cantidad;
+	}
+	
+	
 	
 	
 	
